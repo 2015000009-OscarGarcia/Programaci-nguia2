@@ -1,55 +1,31 @@
-﻿
-
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Escriba dos valores numericos: ");
-        double num1=Convert.ToDouble(Console.ReadLine());
-        double num2=Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("RANGO DE ESTUDIANTES");
+        Console.WriteLine("Ingrese una letra()A, B, C, D, F");
+        char letra = Char.ToUpper(Console.ReadKey().KeyChar);
+        Console.WriteLine();
 
-        Console.WriteLine("\n****MENU PRINCIPAL****");
-        Console.WriteLine("1- suma");
-        Console.WriteLine("2- resta");
-        Console.WriteLine("3- multiplicación");
-        Console.WriteLine("4- división");
-        Console.WriteLine("5- salir");
-        Console.Write("Digite el valor segun sea la Operación: []");
-        int opc = Convert.ToInt32(Console.ReadLine());
-
-
-        string msj = "";
-        double result=0;
-        switch (opc)
-        {
-            case 1:
-                msj = "\nSUMA\nLa suma es: ";
-                result = num1 + num2;
+        switch (letra) {
+            case 'A': 
+                Console.WriteLine("EXCELENTE");
                 break;
-            case 2:
-                msj = "\nRESTA\nLa resta es: ";
-                result = num1 - num2;
+            case 'B':
+                Console.WriteLine("BUENO");
                 break;
-            case 3:
-                msj = "\nMULTIPLICACIÓN\nLa multiplicación es: ";
-                result = num1 * num2;
+            case 'C':
+                Console.WriteLine("REGULAR");
                 break;
-            case 4:
-                msj = "\nDIVISIÓN\nLa división es: ";
-                result = num1 / num2;
+            case 'D':
+                Console.WriteLine("DEFICIENTE");
                 break;
-            case 5:
-                msj = "Saliendo del sistema";
+            case 'F':
+                Console.WriteLine("REPROBADO");
                 break;
             default:
-                msj = "Digite una Opción valida!!!";
+                Console.WriteLine("Escriba una letra valida!!!");
                 break;
-
         }
-        Console.Clear();
-        Console.BackgroundColor = ConsoleColor.Green;
-        Console.ForegroundColor = ConsoleColor.Blue;
-        Console.WriteLine(msj);
-        Console.WriteLine(result);
     }
 }
